@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<h2 class="mb-4 text-center fw-bold">Available Travel Options</h2>
+
+<!-- Search/Filter -->
+<form method="get" class="row g-3 mb-4">
+  <div class="col-md-3">
+    <input type="text" name="source" class="form-control" placeholder="Source" value="{{ request.GET.source }}">
+  </div>
+  <div class="col-md-3">
+    <input type="text" name="destination" class="form-control" placeholder="Destination" value="{{ request.GET.destination }}">
+  </div>
+  <div class="col-md-3">
+    <input type="date" name="date" class="form-control" value="{{ request.GET.date }}">
+  </div>
+  <div class="col-md-3">
+    <button type="submit" class="btn btn-primary w-100">Search</button>
+  </div>
+</form>
+
+<!-- Travel Options -->
+<div class="row">
+  {% for travel in travels %}
+  <div class="col-md-4 mb-4">
+    <div class="card p-3">
+      <h5 class="fw-bold">{{ travel.type }}</h5>
+      <p><strong>{{ travel.source }}</strong> → <strong>{{ travel.destination }}</strong></p>
+      <p class="mb-1">🕒 {{ travel.date_time }}</p>
+      <p class="mb-1">💰 ₹{{ travel.price }}</p>
+      <p class="mb-2">🪑 Seats: {{ travel.available_seats }}</p>
+      <a href="{% url 'book_travel' travel.id %}" class="btn btn-primary w-100">Book Now</a>
+    </div>
+  </div>
+  {% empty %}
+  <p class="text-center text-muted">No travel options found.</p>
+  {% endfor %}
+</div>
+{% endblock %}

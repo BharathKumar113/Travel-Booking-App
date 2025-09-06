@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-body p-4">
+          <h2 class="text-center mb-3 fw-bold text-warning">
+            Book {{ travel.type }}
+          </h2>
+          <p class="text-center text-muted mb-4">
+            <i class="bi bi-geo-alt"></i> 
+            {{ travel.source }} → {{ travel.destination }} <br>
+            <i class="bi bi-calendar-event"></i> {{ travel.date_time|date:'Y-m-d H:i' }} <br>
+            <i class="bi bi-currency-rupee"></i> {{ travel.price }} per seat | 
+            <i class="bi bi-person-seat"></i> {{ travel.available_seats }} left
+          </p>
+
+          <form method="POST" novalidate>
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <div class="d-flex justify-content-between mt-3">
+              <a class="btn btn-secondary px-4" href="{% url 'home' %}">
+                <i class="bi bi-arrow-left"></i> Back
+              </a>
+              <button type="submit" class="btn btn-warning fw-semibold px-4">
+                <i class="bi bi-check-circle"></i> Confirm Booking
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

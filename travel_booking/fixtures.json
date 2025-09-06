@@ -1,0 +1,38 @@
+[
+  {
+    "model": "core.traveloption",
+    "pk": 1,
+    "fields": {
+      "type": "Flight",
+      "source": "Hyderabad",
+      "destination": "Bangalore",
+      "date_time": "2025-08-30T10:00:00Z",
+      "price": "2500.00",
+      "available_seats": 50
+    }
+  },
+  {
+    "model": "core.traveloption",
+    "pk": 2,
+    "fields": {
+      "type": "Train",
+      "source": "Delhi",
+      "destination": "Agra",
+      "date_time": "2025-08-29T06:00:00Z",
+      "price": "500.00",
+      "available_seats": 120
+    }
+  },
+  {
+    "model": "core.traveloption",
+    "pk": 3,
+    "fields": {
+      "type": "Bus",
+      "source": "Chennai",
+      "destination": "Pondicherry",
+      "date_time": "2025-08-29T08:00:00Z",
+      "price": "300.00",
+      "available_seats": 40
+    }
+  }
+]

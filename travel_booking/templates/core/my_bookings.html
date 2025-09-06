@@ -1,0 +1,64 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<div class="container py-4">
+  <h2 class="mb-4 text-center fw-bold">My Bookings</h2>
+
+  <div class="table-responsive shadow-sm rounded">
+    <table class="table table-hover table-bordered align-middle">
+      <thead class="table-dark">
+        <tr class="text-center">
+          <th>ID</th>
+          <th>Travel Option</th>
+          <th>Seats</th>
+          <th>Total Price</th>
+          <th>Status</th>
+          <th>Booked On</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for b in bookings %}
+          <tr>
+            <td class="fw-semibold text-center">#{{ b.id }}</td>
+            <td>
+              <span class="fw-bold">{{ b.travel_option }}</span><br>
+              <small class="text-muted">
+                <i class="bi bi-calendar-event"></i> {{ b.travel_option.date_time|date:'Y-m-d H:i' }}
+              </small>
+            </td>
+            <td class="text-center">{{ b.number_of_seats }}</td>
+            <td class="text-success fw-bold text-center">₹{{ b.total_price }}</td>
+            <td class="text-center">
+              {% if b.status == 'Confirmed' %}
+                <span class="badge bg-success px-3 py-2">{{ b.status }}</span>
+              {% else %}
+                <span class="badge bg-secondary px-3 py-2">{{ b.status }}</span>
+              {% endif %}
+            </td>
+            <td class="text-center">{{ b.booking_date|date:'Y-m-d H:i' }}</td>
+            <td class="text-center">
+              {% if b.status == 'Confirmed' %}
+                <form method="POST" action="{% url 'cancel_booking' b.id %}" class="d-inline">
+                  {% csrf_token %}
+                  <button class="btn btn-outline-danger btn-sm px-3" onclick="return confirm('Cancel this booking?')">
+                    <i class="bi bi-x-circle"></i> Cancel
+                  </button>
+                </form>
+              {% else %}
+                <span class="text-muted">—</span>
+              {% endif %}
+            </td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td colspan="7" class="text-center py-4 text-muted">
+              <i class="bi bi-info-circle fs-4"></i><br>
+              You have no bookings yet.
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

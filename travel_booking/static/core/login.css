@@ -1,0 +1,28 @@
+
+  form p {
+    margin-bottom: 0.8rem; 
+  }
+
+  
+  form input, 
+  form select, 
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+  }
+
+  form input:focus {
+    border-color: #198754; 
+    outline: none;
+    box-shadow: 0 0 4px rgba(25, 135, 84, 0.5);
+  }
+
+  
+  form label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    display: block;
+  }
