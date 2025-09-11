@@ -5,7 +5,7 @@
 ![Bootstrap](https://img.shields.io/badge/UI-Bootstrap-purple.svg?logo=bootstrap)  
 ![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)  
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)  
-![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)  
+
 
 ---
 
