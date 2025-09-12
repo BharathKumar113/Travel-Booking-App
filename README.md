@@ -1,4 +1,4 @@
-# ✈️ Travel Booking App  
+# Travel Booking App  
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg?logo=python&logoColor=white)  
 ![Django](https://img.shields.io/badge/django-4.0%2B-green.svg?logo=django&logoColor=white)  
@@ -9,20 +9,20 @@
 
 ---
 
-## 📌 Overview  
+##  Overview  
 
 The **Travel Booking App** is a Django-based web application that allows users to:  
-- 🔍 Browse and filter available travel options (by type, source, destination, and date).  
-- 👤 Register and log in to manage bookings.  
-- 🛒 Book travel tickets with dynamic seat availability and total price calculation.  
-- ❌ Cancel confirmed bookings with automatic seat restoration.  
-- 📑 View personal booking history in a clean dashboard.  
+-  Browse and filter available travel options (by type, source, destination, and date).  
+-  Register and log in to manage bookings.  
+-  Book travel tickets with dynamic seat availability and total price calculation.  
+-  Cancel confirmed bookings with automatic seat restoration.  
+-  View personal booking history in a clean dashboard.  
 
 This project is built with **Django 4.x**, **Bootstrap**, and **SQLite (default)**, but it can be scaled to **PostgreSQL or MySQL** for production.  
 
 ---
 
-## 🚀 Features  
+##  Features  
 
 ✅ User authentication (Register, Login, Logout)  
 ✅ Search travel options (filter by type, source, destination, date)  
@@ -34,7 +34,7 @@ This project is built with **Django 4.x**, **Bootstrap**, and **SQLite (default)
 
 ---
 
-## 🛠️ Tech Stack  
+##  Tech Stack  
 
 - **Backend**: Django (Python 3.9+)  
 - **Frontend**: Django Templates + Bootstrap 5  
@@ -44,7 +44,7 @@ This project is built with **Django 4.x**, **Bootstrap**, and **SQLite (default)
 
 ---
 
-## 📂 Project Structure  
+##  Project Structure  
 
 ```
 TravelBookingApp/
@@ -67,7 +67,7 @@ TravelBookingApp/
 
 ---
 
-## ⚡ Installation  
+##  Installation  
 
 1. **Clone the Repository**  
 
@@ -101,7 +101,7 @@ python manage.py runserver
 
 ---
 
-## 🎯 Usage  
+##  Usage  
 
 - Register/Login  
 - Search for travel options  
@@ -112,7 +112,7 @@ python manage.py runserver
 
 ---
 
-## 🤝 Contributing  
+##  Contributing  
 
 1. Fork the repo  
 2. Create a new branch (`feature/awesome-feature`)  
@@ -122,6 +122,6 @@ python manage.py runserver
 
 ---
 
-## 👨‍💻 Author  
+##  Author  
 
 Developed by **Bharath Kumar Mattapally**  
